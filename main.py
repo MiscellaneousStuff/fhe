@@ -92,15 +92,3 @@ for i in range(1, 10):
 
 # o = dec(p, s, N)
 # print(len(str(s)), o)
-
-# """Naive Bootstrapping"""
-# c1 = enc(R, p, r, 2, N)
-# s1 = c1 ** 2 # m = 4
-# s2 = enc(R, p, r, s1, N)
-# s3 = s2 ** 2 # m = 16
-# print(
-#     c1, dec(p, c1, N), "\n",
-#     s1, dec(p, s1, N), "\n",
-#     s2, dec(p, s2, N), "\n",
-#     s3, dec(p, s3, N))
-# # s = c1
