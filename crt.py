@@ -1,4 +1,7 @@
-"""Understanding chinese remainder theorem (CRT)."""
+"""Understanding chinese remainder theorem (CRT).
+
+This is used to decompose a large number (modulo form)
+into smaller numbers with equivalent properties."""
 
 def findMinX(num, rem, k):
     # Initialize result

@@ -1,5 +1,14 @@
 # Fully Homomorphic Encryption
 
+## Overview
+
+- Chinese Remainder Theorem (CRT) (aka: Dimensionality reduction)
+  - Applied to modulo numbers to reduce their size of storage + compute
+    then reconstructed. Operations on those smaller numbers before
+    reconstruction are mathematically identical to operating on the original
+    number.
+  - Very similar to FFT for switching between time and frequency domain
+
 ## Optimisation
 
 ### Neural Networks
