@@ -174,6 +174,13 @@ encryption space, which is useful because calculations within
 encryption space are very costly in general, especially
 multiplication.
 
+Decomposition of the large number happens in outer cipherspace,
+then the computations happen in the now more efficient and parallel
+inner cipherspace, and then reconstructed in outer cipherspace.
+
+So it's effectively dimensionality reduction mainly in inner cipherspace
+with the decomposition and reconstruction happening in the outerspace.
+
 - Coprime req: Works when moduli are pairwise coprime (have no common factors)
 - Guaranteed solution: Guarantees unique solution modulo the product of all moduli
 

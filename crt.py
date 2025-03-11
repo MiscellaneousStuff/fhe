@@ -15,11 +15,12 @@ $$ M \text{ is the product of all moduli} $$
 
 def findMinX(num, rem, k):
     # Initialize result
-    x = 1 # what is this lol
+    x = 1
 
     # As per the Chinise remainder
     # theorem, this loop will
     # always break.
+    # NOTE: As long as all numbers in `num` are co-prime
     while(True):
         # Check if remainder of x % num[j] is rem[j] or not (for all j from 0 to k-1)
         j = 0
@@ -38,7 +39,7 @@ def findMinX(num, rem, k):
 
 # Driver Code
 if __name__ == "__main__":
-    num = [5, 7] # moduli (divisors)
+    num = [507, 707] # moduli (divisors)
     rem = [4, 2] # residues
     k = len(num)
     print("x is", findMinX(num, rem, k))
