@@ -164,3 +164,21 @@ This allows us to optimise calculations happening within
 encryption space, which is useful because calculations within
 encryption space are very costly in general, especially
 multiplication.
+
+- Coprime req: Works when moduli are pairwise coprime (have no common factors)
+- Guaranteed solution: Guarantees unique solution modulo the product of all moduli
+
+Big O:
+$$ O(n * log^2 M) $$
+where
+$$ n \text{ is the number of moduli} $$
+$$ M \text{ is the product of all moduli} $$
+
+### Remainder vs Residue
+
+- Remainder just refers to the remaining part after division
+- Residue has two meanings:
+1) Same as remainder
+2) Every single possible value after a modulo operation
+For eg. for module 5, it would be
+$$ \{ 0, 1, 2, 3, 4 \} $$
