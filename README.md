@@ -1,5 +1,27 @@
 # Fully Homomorphic Encryption
 
+## Types of FHE
+
+### Bootstrapping (Turing Complete)
+
+- TFHE (10s of ms for bootstrapping)
+
+### Levelled (Noise Budget)
+
+<!-- What is the typical mutiplicative depth here? -->
+- BFV
+- BGV
+- CKKS
+
+## Packing
+
+- Encrypting multiple values in one ciphertext?
+
+## Approaches
+
+- Start off with implementing levelled FHE as its fast building
+  block for everything else? TFHE?
+
 ## Techniques
 
 ### Binary Tree Multiplication
