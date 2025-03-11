@@ -191,3 +191,9 @@ $$ M \text{ is the product of all moduli} $$
 2) Every single possible value after a modulo operation
 For eg. for module 5, it would be
 $$ \{ 0, 1, 2, 3, 4 \} $$
+
+### Implementations (according to claude 3.7 sonnet)
+
+- Microsoft SEAL: typically uses 3-10 primes for its RNS base
+- HElib: can use dozens of moduli in its modulus chain
+- TFHE: uses different decomposition strategies for its bootstrapping keys

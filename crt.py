@@ -1,11 +1,21 @@
 """Understanding chinese remainder theorem (CRT).
 
 This is used to decompose a large number (modulo form)
-into smaller numbers with equivalent properties."""
+into smaller numbers with equivalent properties.
+
+Basically dimensionality reduction for computing
+modulo numbers.
+
+Big O:
+$$ O(n * log^2 M) $$
+where
+$$ n \text{ is the number of moduli} $$
+$$ M \text{ is the product of all moduli} $$
+"""
 
 def findMinX(num, rem, k):
     # Initialize result
-    x = 1
+    x = 1 # what is this lol
 
     # As per the Chinise remainder
     # theorem, this loop will
