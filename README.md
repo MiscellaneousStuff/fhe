@@ -1,5 +1,27 @@
 # Fully Homomorphic Encryption
 
+## Optimisation
+
+### Neural Networks
+
+- Replace multiplication with repeated addition to avoid noise growth
+  - Possibly a good idea for deep networks, or heavy sequential behaviour
+  - Removes need for bootstrapping, especially when the constant which the
+    value is being multiplied by is low enough where repeated addition is
+    efficient.
+- Param (plain vs cipher) size scaling factor (NOTE: from 3.7 claude, need to validate)
+  - BGV/BFV:
+    - 1 byte -> 2,000 - 10,000x (2KB-10KB) expansion
+    - 32-bit integer - 8-40KB ciphertext
+    - Typical params: 8KB-128KB ciphertext
+  - CKKS:
+    - Similar to BGV/BFV
+    - Optimised for floats
+    - 10KB - 100KB per ciphertext
+  - TFHE:
+    - 1 bit -> 1-2KB ciphertext
+    - 1 byte -> 8-16KB ciphertext
+
 ## Concrete-ML (MNIST Benchmarks)
 
 ```bash
@@ -130,3 +152,15 @@ $$ f(\alpha x) = \alpha f(x) \text{ for scalar } \alpha $$
 2. AND across all results (bubble AND?)
 3. Multiply final sum (0 or 1) for each possible matching idx
 4. Return non-zero value?
+
+## Chinese Remainder Theorem
+
+### Overview
+
+Find number that satisfies multiple remainder conditions at once.
+It allows us to optimise calculations involving massive numbers
+into multiple smaller ones.
+This allows us to optimise calculations happening within
+encryption space, which is useful because calculations within
+encryption space are very costly in general, especially
+multiplication.
